@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppCarrera.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,6 +29,18 @@ namespace AppCarrera2
             {
                 this.Dispose();
             }
+        }
+
+        private void nuevaCarreraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarCarrera agregarCarrera = new frmAgregarCarrera();
+            agregarCarrera.ShowDialog();
+        }
+
+        private void nuevaAsignaturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarAsignatura agregarAsignatura = new frmAgregarAsignatura();
+            agregarAsignatura.ShowDialog();
         }
     }
 }

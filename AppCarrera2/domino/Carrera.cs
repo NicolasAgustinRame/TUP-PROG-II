@@ -35,6 +35,15 @@ namespace AppCarrera2.domino
             return "Nombre de la Carrera: " + NombreTitulo;
         }
 
+        public void AgregarDetalle(DetalleCarrera detalle)
+        {
+            detallesCarrera.Add(detalle);
+        }
+
+        public void EliminarDetalle(int cod)
+        {
+            detallesCarrera.RemoveAt(cod);
+        }
 
     }
 }

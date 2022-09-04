@@ -1,5 +1,5 @@
-﻿using AppCarrera.Datos;
-using AppCarrera.Dominio;
+﻿using AppCarrera2.datos;
+using AppCarrera2.domino;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +14,12 @@ namespace AppCarrera.Formularios
 {
     public partial class frmAgregarCarrera : Form
     {
-        HelperDB oHelperDB;
+        DBHelper oHelperDB;
         Carrera carrera;
         public frmAgregarCarrera()
         {
             InitializeComponent();
-            oHelperDB = new HelperDB();
+            oHelperDB = new DBHelper();
             
         }
 
@@ -123,9 +123,9 @@ namespace AppCarrera.Formularios
             if (rbt1erCuatrimestre.Checked) cuatrimestre = 1;
             if (rbt1erCuatrimestre.Checked) cuatrimestre = 2;
 
-            DetalleCarrera detalle = new DetalleCarrera( anioCursado, cuatrimestre, asignatura);
+            DetalleCarrera detalle = new DetalleCarrera(anioCursado, cuatrimestre, asignatura);
             carrera.AgregarDet(detalle);
-            dgvDetalleCarrera.Rows.Add( detalle.AnioCursado, detalle.Cuatrimestre, detalle.Materia );
+            dgvDetalleCarrera.Rows.Add(detalle.AnioCursado, detalle.Cuatrimestre, detalle.Materia);
 
         }
 
@@ -147,7 +147,7 @@ namespace AppCarrera.Formularios
         private void GuardarCarrera()
         {
             carrera.NombreTitulo = txtNuevaCarrera.Text;
-            if (oHelperDB.ConfirmarCarrera(carrera))
+            //if (oHelperDB.ConfirmarCarrera(carrera))
             {
                 MessageBox.Show("Carrera registrada", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();

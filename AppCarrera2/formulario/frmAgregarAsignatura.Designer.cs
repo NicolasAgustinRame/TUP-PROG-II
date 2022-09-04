@@ -1,6 +1,6 @@
 ﻿namespace AppCarrera.Formularios
 {
-    partial class frmCarrera_Asignaturas
+    partial class frmAgregarAsignatura
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // frmCarrera_Asignaturas
+            // frmAgregarAsignatura
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(766, 460);
-            this.Name = "frmCarrera_Asignaturas";
+            this.Name = "frmAgregarAsignatura";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asignaturas";
+            this.Load += new System.EventHandler(this.frmAgregarAsignatura_Load);
             this.ResumeLayout(false);
 
         }

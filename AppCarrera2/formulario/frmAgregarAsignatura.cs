@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace AppCarrera.Formularios
 {
-    public partial class frmCarrera_Asignaturas : Form
+    public partial class frmAgregarAsignatura : Form
     {
-        public frmCarrera_Asignaturas()
+        public frmAgregarAsignatura()
         {
             InitializeComponent();
+        }
+
+        private void frmAgregarAsignatura_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

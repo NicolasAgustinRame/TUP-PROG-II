@@ -50,6 +50,18 @@
     <Compile Include="domino\Asignatura.cs" />
     <Compile Include="domino\Carrera.cs" />
     <Compile Include="domino\DetalleCarrera.cs" />
+    <Compile Include="formulario\frmAgregarCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulario\frmAgregarCarrera.Designer.cs">
+      <DependentUpon>frmAgregarCarrera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formulario\frmAgregarAsignatura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulario\frmAgregarAsignatura.Designer.cs">
+      <DependentUpon>frmAgregarAsignatura.cs</DependentUpon>
+    </Compile>
     <Compile Include="formulario\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +70,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formulario\frmAgregarCarrera.resx">
+      <DependentUpon>frmAgregarCarrera.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulario\frmAgregarAsignatura.resx">
+      <DependentUpon>frmAgregarAsignatura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formulario\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
