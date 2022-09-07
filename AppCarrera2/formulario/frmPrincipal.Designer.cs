@@ -80,14 +80,15 @@
             // 
             this.nuevaCarreraToolStripMenuItem.Name = "nuevaCarreraToolStripMenuItem";
             this.nuevaCarreraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nuevaCarreraToolStripMenuItem.Text = "Nueva Carrera";
+            this.nuevaCarreraToolStripMenuItem.Text = "Agregar Carrera";
             this.nuevaCarreraToolStripMenuItem.Click += new System.EventHandler(this.nuevaCarreraToolStripMenuItem_Click);
             // 
             // verCarrerasToolStripMenuItem
             // 
             this.verCarrerasToolStripMenuItem.Name = "verCarrerasToolStripMenuItem";
             this.verCarrerasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.verCarrerasToolStripMenuItem.Text = "Ver Carreras";
+            this.verCarrerasToolStripMenuItem.Text = "Reporte Carreras";
+            this.verCarrerasToolStripMenuItem.Click += new System.EventHandler(this.verCarrerasToolStripMenuItem_Click);
             // 
             // asignaturasToolStripMenuItem
             // 
@@ -101,14 +102,14 @@
             // nuevaAsignaturaToolStripMenuItem
             // 
             this.nuevaAsignaturaToolStripMenuItem.Name = "nuevaAsignaturaToolStripMenuItem";
-            this.nuevaAsignaturaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nuevaAsignaturaToolStripMenuItem.Text = "Nueva Asignatura";
+            this.nuevaAsignaturaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.nuevaAsignaturaToolStripMenuItem.Text = "Agregar Asignatura";
             this.nuevaAsignaturaToolStripMenuItem.Click += new System.EventHandler(this.nuevaAsignaturaToolStripMenuItem_Click);
             // 
             // verAsignaturasToolStripMenuItem
             // 
             this.verAsignaturasToolStripMenuItem.Name = "verAsignaturasToolStripMenuItem";
-            this.verAsignaturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verAsignaturasToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.verAsignaturasToolStripMenuItem.Text = "Ver Asignaturas";
             // 
             // frmPrincipal

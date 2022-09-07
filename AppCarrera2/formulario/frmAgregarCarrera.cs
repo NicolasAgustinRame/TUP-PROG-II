@@ -20,6 +20,7 @@ namespace AppCarrera.Formularios
         {
             InitializeComponent();
             oHelperDB = new DBHelper();
+            carrera = new Carrera();
             
         }
 
@@ -62,6 +63,7 @@ namespace AppCarrera.Formularios
             cboMateria.SelectedValue = -1;
             rbt1erCuatrimestre.Checked = false;
             rbt2doCuatrimestre.Checked = false;
+            dgvDetalleCarrera.Rows.Clear();
         }
 
         private void habilitar(bool v)
@@ -102,30 +104,27 @@ namespace AppCarrera.Formularios
                 return;
             }
 
-            foreach (DataGridViewRow row in dgvDetalleCarrera.Rows)
+            foreach (DetalleCarrera detc in carrera.DetallesCarreras)
             {
-                if (row.Cells["colMateria"].Value.ToString().Equals(cboMateria.Text))
+                if (detc.Materia.Nombre == cboMateria.Text)
                 {
                     MessageBox.Show("La MATERIA: " + cboMateria.Text + "ya esta agregada!", "Control",
                         MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
             }
-
-            DataRowView item = (DataRowView)cboMateria.SelectedItem;
-            int codAsignatura = Convert.ToInt32(item.Row.ItemArray[0]);
-            string nombre = item.Row.ItemArray[1].ToString();
-
-
-            Asignatura asignatura = new Asignatura(codAsignatura, nombre);
-            int anioCursado = int.Parse(txtAñoCursado.Text);
+            Asignatura asignatura = new Asignatura();
+            asignatura.CodAsignatura = Convert.ToInt32(cboMateria.SelectedValue);
+            asignatura.Nombre = cboMateria.Text;
+            int anioCursado = Convert.ToInt32(txtAñoCursado.Text);
             int cuatrimestre = 0;
             if (rbt1erCuatrimestre.Checked) cuatrimestre = 1;
-            if (rbt1erCuatrimestre.Checked) cuatrimestre = 2;
+            if (rbt2doCuatrimestre.Checked) cuatrimestre = 2;
 
-            DetalleCarrera detalle = new DetalleCarrera(anioCursado, cuatrimestre, asignatura);
-            carrera.AgregarDet(detalle);
-            dgvDetalleCarrera.Rows.Add(detalle.AnioCursado, detalle.Cuatrimestre, detalle.Materia);
+            DetalleCarrera detallecarrera = new DetalleCarrera(anioCursado, cuatrimestre, asignatura);
+            carrera.AgregarDetalle(detallecarrera);
+            dgvDetalleCarrera.Rows.Add(new Object[] { asignatura.CodAsignatura, asignatura.Nombre, anioCursado, cuatrimestre });
+
 
         }
 
@@ -137,39 +136,27 @@ namespace AppCarrera.Formularios
                 MessageBox.Show("Ingresar nombre de CARRERA", "Control", MessageBoxButtons.OK, MessageBoxIcon.Error); return;
             }
 
-            GuardarCarrera();
-
+            oHelperDB.ConfirmarCarrera(carrera);
+            MessageBox.Show("Carrera ingresada correctamente", "Control", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             limpiar();
             habilitar(false);
         }
 
-        private void GuardarCarrera()
-        {
-            carrera.NombreTitulo = txtNuevaCarrera.Text;
-            //if (oHelperDB.ConfirmarCarrera(carrera))
-            {
-                MessageBox.Show("Carrera registrada", "Informe", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Dispose();
-            }
-            else
-            {
-                MessageBox.Show("ERROR. No se pudo registrar la carrera", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+        
 
         private void dgvDetalleCarrera_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dgvDetalleCarrera.CurrentCell.ColumnIndex == 4)
             {
-                carrera.EliminarDet(dgvDetalleCarrera.CurrentCell.RowIndex);
+                carrera.EliminarDetalle(dgvDetalleCarrera.CurrentCell.RowIndex);
                 dgvDetalleCarrera.Rows.Remove(dgvDetalleCarrera.CurrentRow);
             }
         }
 
         private void txtNuevaCarrera_TextChanged(object sender, EventArgs e)
         {
-            
+            carrera.NombreTitulo = txtNuevaCarrera.Text;
         }
     }
 

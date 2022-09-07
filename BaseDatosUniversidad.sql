@@ -60,10 +60,10 @@ create proc SP_ADD_CARRERA
 @nombreTitulo varchar (100),
 @new_codCarrera int output 
 as
-insert into Carreras(nombreTitulo)	
-			values (@nombreTitulo);
+begin
+insert into Carreras(nombreTitulo)values (@nombreTitulo);
 	set  @new_codCarrera = scope_identity();
-
+end
 
 create proc SP_ADD_DET
 @anioCursado int,
@@ -71,8 +71,10 @@ create proc SP_ADD_DET
 @codAsignatura int,
 @codCarrera int
 as
+begin
 insert into DetallesCarreras(anioCursado, cuatrimestre, codAsignatura, codCarrera)
 	values (@anioCursado, @cuatrimestre, @codAsignatura, @codCarrera)
+end
 
 create proc SP_CONSULTAR_CARRERA
 as
@@ -81,9 +83,18 @@ begin
 	order by codCarrera
 end
 
---create proc SP_CONSULTAR_DET
---as
---select c.nombreTitulo 'Carrera', a.nombre 'Asignatura', dc.anioCursado 'Año Cursado', dc.cuatrimestre 'Cuatrimestre'
---from DetallesCarreras dc join Carreras c on dc.codCarrera = c.codCarrera
---	 join Asignaturas a on dc.codAsignatura = a.codAsignatura
---order by c.codCarrera
+create proc SP_MOSTRAR_INFO
+as 
+select c.nombreTitulo as 'Carrera', a.nombre as Materia, dc.anioCursado  as 'Año Cursado', dc.cuatrimestre as Cuatrimestre
+from DetallesCarreras dc join Carreras c on dc.codCarrera = c.codCarrera
+		join Asignaturas a on dc.codAsignatura = a.codAsignatura
+
+alter table Asignaturas add activa BIT 
+
+create proc SP_BajaLogica
+@codAsignatura BIGINT
+as
+begin 
+Update Asignaturas SET activa = 0
+Where codAsignatura=@codAsignatura
+end

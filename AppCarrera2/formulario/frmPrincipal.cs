@@ -1,4 +1,5 @@
 ﻿using AppCarrera.Formularios;
+using AppCarrera2.formulario.reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +42,12 @@ namespace AppCarrera2
         {
             frmAgregarAsignatura agregarAsignatura = new frmAgregarAsignatura();
             agregarAsignatura.ShowDialog();
+        }
+
+        private void verCarrerasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteCarrera reporteCarrera = new frmReporteCarrera();
+            reporteCarrera.ShowDialog();
         }
     }
 }
