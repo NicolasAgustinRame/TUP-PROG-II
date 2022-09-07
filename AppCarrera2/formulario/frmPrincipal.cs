@@ -40,8 +40,7 @@ namespace AppCarrera2
 
         private void nuevaAsignaturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAgregarAsignatura agregarAsignatura = new frmAgregarAsignatura();
-            agregarAsignatura.ShowDialog();
+            
         }
 
         private void verCarrerasToolStripMenuItem_Click(object sender, EventArgs e)

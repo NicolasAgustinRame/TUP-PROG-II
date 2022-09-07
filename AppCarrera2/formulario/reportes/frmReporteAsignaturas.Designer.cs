@@ -30,15 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.asignaturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new AppCarrera2.formulario.reportes.DataSet1();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.asignaturasTableAdapter = new AppCarrera2.formulario.reportes.DataSet1TableAdapters.AsignaturasTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.asignaturasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1BindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // asignaturasBindingSource
+            // 
+            this.asignaturasBindingSource.DataMember = "Asignaturas";
+            this.asignaturasBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // reportViewer1
             // 
@@ -51,16 +61,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(656, 438);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // asignaturasBindingSource
-            // 
-            this.asignaturasBindingSource.DataMember = "Asignaturas";
-            this.asignaturasBindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataSet1BindingSource
             // 
@@ -78,7 +78,7 @@
             this.ClientSize = new System.Drawing.Size(654, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReporteAsignaturas";
-            this.Text = "frmReporteAsignaturas";
+            this.Text = "Reporte Asignaturas";
             this.Load += new System.EventHandler(this.frmReporteAsignaturas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.asignaturasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
