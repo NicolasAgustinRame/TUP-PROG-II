@@ -74,12 +74,6 @@
     <Compile Include="formulario\frmAgregarCarrera.Designer.cs">
       <DependentUpon>frmAgregarCarrera.cs</DependentUpon>
     </Compile>
-    <Compile Include="formulario\frmAgregarAsignatura.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="formulario\frmAgregarAsignatura.Designer.cs">
-      <DependentUpon>frmAgregarAsignatura.cs</DependentUpon>
-    </Compile>
     <Compile Include="formulario\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +84,17 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>BDuniversidaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="formulario\reportes\AsignaturaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AsignaturaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="formulario\reportes\frmReporteAsignaturas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formulario\reportes\frmReporteAsignaturas.Designer.cs">
+      <DependentUpon>frmReporteAsignaturas.cs</DependentUpon>
     </Compile>
     <Compile Include="formulario\reportes\frmReporteCarrera.cs">
       <SubType>Form</SubType>
@@ -103,15 +108,16 @@
     <EmbeddedResource Include="formulario\frmAgregarCarrera.resx">
       <DependentUpon>frmAgregarCarrera.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formulario\frmAgregarAsignatura.resx">
-      <DependentUpon>frmAgregarAsignatura.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formulario\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formulario\reportes\frmReporteAsignaturas.resx">
+      <DependentUpon>frmReporteAsignaturas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formulario\reportes\frmReporteCarrera.resx">
       <DependentUpon>frmReporteCarrera.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formulario\reportes\rptAsignaturas.rdlc" />
     <EmbeddedResource Include="formulario\reportes\rptCarreras.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -133,6 +139,17 @@
     </None>
     <None Include="formulario\reportes\BDuniversidaDataSet.xss">
       <DependentUpon>BDuniversidaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="formulario\reportes\AsignaturaDataSet.xsc">
+      <DependentUpon>AsignaturaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="formulario\reportes\AsignaturaDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AsignaturaDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="formulario\reportes\AsignaturaDataSet.xss">
+      <DependentUpon>AsignaturaDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

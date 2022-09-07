@@ -35,7 +35,6 @@
             this.nuevaCarreraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verCarrerasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.asignaturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevaAsignaturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verAsignaturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -79,38 +78,31 @@
             // nuevaCarreraToolStripMenuItem
             // 
             this.nuevaCarreraToolStripMenuItem.Name = "nuevaCarreraToolStripMenuItem";
-            this.nuevaCarreraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.nuevaCarreraToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.nuevaCarreraToolStripMenuItem.Text = "Agregar Carrera";
             this.nuevaCarreraToolStripMenuItem.Click += new System.EventHandler(this.nuevaCarreraToolStripMenuItem_Click);
             // 
             // verCarrerasToolStripMenuItem
             // 
             this.verCarrerasToolStripMenuItem.Name = "verCarrerasToolStripMenuItem";
-            this.verCarrerasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verCarrerasToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.verCarrerasToolStripMenuItem.Text = "Reporte Carreras";
             this.verCarrerasToolStripMenuItem.Click += new System.EventHandler(this.verCarrerasToolStripMenuItem_Click);
             // 
             // asignaturasToolStripMenuItem
             // 
             this.asignaturasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevaAsignaturaToolStripMenuItem,
             this.verAsignaturasToolStripMenuItem});
             this.asignaturasToolStripMenuItem.Name = "asignaturasToolStripMenuItem";
             this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
             this.asignaturasToolStripMenuItem.Text = "Asignaturas";
             // 
-            // nuevaAsignaturaToolStripMenuItem
-            // 
-            this.nuevaAsignaturaToolStripMenuItem.Name = "nuevaAsignaturaToolStripMenuItem";
-            this.nuevaAsignaturaToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.nuevaAsignaturaToolStripMenuItem.Text = "Agregar Asignatura";
-            this.nuevaAsignaturaToolStripMenuItem.Click += new System.EventHandler(this.nuevaAsignaturaToolStripMenuItem_Click);
-            // 
             // verAsignaturasToolStripMenuItem
             // 
             this.verAsignaturasToolStripMenuItem.Name = "verAsignaturasToolStripMenuItem";
-            this.verAsignaturasToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.verAsignaturasToolStripMenuItem.Text = "Ver Asignaturas";
+            this.verAsignaturasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verAsignaturasToolStripMenuItem.Text = "Reporte Asignaturas";
+            this.verAsignaturasToolStripMenuItem.Click += new System.EventHandler(this.verAsignaturasToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -140,7 +132,6 @@
         private System.Windows.Forms.ToolStripMenuItem nuevaCarreraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verCarrerasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem asignaturasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevaAsignaturaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verAsignaturasToolStripMenuItem;
     }
 }

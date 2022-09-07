@@ -72,7 +72,7 @@
             this.ClientSize = new System.Drawing.Size(675, 581);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReporteCarrera";
-            this.Text = "frmReporteCarrera";
+            this.Text = "Reporte Carreras";
             this.Load += new System.EventHandler(this.frmReporteCarrera_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sPMOSTRARINFOBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bDuniversidaDataSet)).EndInit();

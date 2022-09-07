@@ -49,5 +49,11 @@ namespace AppCarrera2
             frmReporteCarrera reporteCarrera = new frmReporteCarrera();
             reporteCarrera.ShowDialog();
         }
+
+        private void verAsignaturasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteAsignaturas reporteAsignaturas = new frmReporteAsignaturas();
+            reporteAsignaturas.ShowDialog();
+        }
     }
 }
