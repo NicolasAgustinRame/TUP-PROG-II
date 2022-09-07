@@ -343,6 +343,7 @@
                       <Value>UNIVERSIDAD </Value>
                       <Style>
                         <FontSize>36pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -376,6 +377,7 @@
                       <Value>Carreras</Value>
                       <Style>
                         <FontSize>28pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
