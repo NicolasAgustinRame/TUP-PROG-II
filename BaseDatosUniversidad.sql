@@ -85,11 +85,9 @@ end
 
 create proc SP_MOSTRAR_INFO
 as 
-select c.nombreTitulo as 'Carrera', a.nombre as Materia, dc.anioCursado  as 'Año Cursado', dc.cuatrimestre as Cuatrimestre
+select c.nombreTitulo as 'Carrera', a.nombre as Materia, dc.anioCursado  as 'Año_Cursado', dc.cuatrimestre as Cuatrimestre
 from DetallesCarreras dc join Carreras c on dc.codCarrera = c.codCarrera
 		join Asignaturas a on dc.codAsignatura = a.codAsignatura
-
-alter table Asignaturas add activa BIT 
 
 create proc SP_BajaLogica
 @codAsignatura BIGINT
